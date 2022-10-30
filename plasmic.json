@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -24,7 +24,7 @@
     {
       "projectId": "9khUWmozN1iqiiTyAwvqXU",
       "projectApiToken": "wApW0kP50waiBtOu7R1LbFTZddmNS9jPc1Aj4ozsXqurFgfOg1t8b9L40WucrLp249X2HAwvvnnFcmyjoQ",
-      "projectName": "Blank project",
+      "projectName": "hedgedashboard",
       "version": "latest",
       "cssFilePath": "plasmic/blank_project/plasmic_blank_project.module.css",
       "components": [
@@ -40,12 +40,104 @@
           "cssFilePath": "plasmic/blank_project/PlasmicHomepage.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "klbS39rUUe",
+          "name": "NavbarCuan",
+          "type": "managed",
+          "projectId": "9khUWmozN1iqiiTyAwvqXU",
+          "renderModuleFilePath": "plasmic/hedgedashboard/PlasmicNavbarCuan.tsx",
+          "importSpec": {
+            "modulePath": "NavbarCuan.tsx"
+          },
+          "cssFilePath": "plasmic/hedgedashboard/PlasmicNavbarCuan.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "kK_QD86zEH",
+          "name": "Sidebar",
+          "type": "managed",
+          "projectId": "9khUWmozN1iqiiTyAwvqXU",
+          "renderModuleFilePath": "plasmic/hedgedashboard/PlasmicSidebar.tsx",
+          "importSpec": {
+            "modulePath": "Sidebar.tsx"
+          },
+          "cssFilePath": "plasmic/hedgedashboard/PlasmicSidebar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "1Qw0dLE7-z",
+          "name": "SidebarMenuItem",
+          "type": "managed",
+          "projectId": "9khUWmozN1iqiiTyAwvqXU",
+          "renderModuleFilePath": "plasmic/hedgedashboard/PlasmicSidebarMenuItem.tsx",
+          "importSpec": {
+            "modulePath": "SidebarMenuItem.tsx"
+          },
+          "cssFilePath": "plasmic/hedgedashboard/PlasmicSidebarMenuItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "YCk9agzBzY",
+          "name": "IndicatorSmall",
+          "type": "managed",
+          "projectId": "9khUWmozN1iqiiTyAwvqXU",
+          "renderModuleFilePath": "plasmic/hedgedashboard/PlasmicIndicatorSmall.tsx",
+          "importSpec": {
+            "modulePath": "IndicatorSmall.tsx"
+          },
+          "cssFilePath": "plasmic/hedgedashboard/PlasmicIndicatorSmall.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "yaxSoGmBRy",
+          "name": "ProductCard",
+          "type": "managed",
+          "projectId": "9khUWmozN1iqiiTyAwvqXU",
+          "renderModuleFilePath": "plasmic/hedgedashboard/PlasmicProductCard.tsx",
+          "importSpec": {
+            "modulePath": "ProductCard.tsx"
+          },
+          "cssFilePath": "plasmic/hedgedashboard/PlasmicProductCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
-      "icons": [],
-      "images": [],
+      "icons": [
+        {
+          "id": "mcZdNanEHp",
+          "name": "ProfileUserSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/hedgedashboard/icons/PlasmicIcon__ProfileUserSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "4G1cCMeGFh",
+          "name": "WalletSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/hedgedashboard/icons/PlasmicIcon__WalletSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "2Kjcn7aZx0",
+          "name": "VaultSvgrepoComsvg2Icon",
+          "moduleFilePath": "plasmic/hedgedashboard/icons/PlasmicIcon__VaultSvgrepoComsvg2.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "ot-sDlsdW",
+          "name": "logocfund.png",
+          "filePath": "../public/plasmic/hedgedashboard/images/logocfundpng.png"
+        },
+        {
+          "id": "oG8ulkXua",
+          "name": "vault-svgrepo-com.svg",
+          "filePath": "../public/plasmic/hedgedashboard/images/vaultSvgrepoComsvg.svg"
+        }
+      ],
       "indirect": false,
-      "globalContextsFilePath": "",
+      "globalContextsFilePath": "plasmic/hedgedashboard/PlasmicGlobalContextsProvider.tsx",
       "codeComponents": [
         {
           "id": "u9L5aXURcW",
@@ -56,6 +148,386 @@
           "id": "gS3dOWAtyM",
           "name": "Fetcher",
           "componentImportPath": "@plasmicapp/data-sources"
+        },
+        {
+          "id": "lV68nPKQM_",
+          "name": "Button",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "rfQL4NbLbH",
+          "name": "ButtonGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "gowECssFB4",
+          "name": "AspectRatio",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "1NROYHKvi6",
+          "name": "Badge",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "8eDUuKO-dW",
+          "name": "BreadcrumbItem",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "doR_NeZ1MRU",
+          "name": "BreadcrumbLink",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "KcOxq0jv3zW",
+          "name": "Breadcrumb",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "6-HIhAAk3Wb",
+          "name": "BreadcrumbSeparator",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "9Bfm5n0sUP7",
+          "name": "Checkbox",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "PzC8R1Dzdue",
+          "name": "CheckboxGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "Pnp-fblZDhQ",
+          "name": "Code",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "6m09BG6Clt5",
+          "name": "Divider",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "We6Ud8_4cpo",
+          "name": "Image",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "8XAhQTJZjtT",
+          "name": "InputGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "XuMV4gE1_V4",
+          "name": "InputLeftElement",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "2NIF3GqxFMw",
+          "name": "Input",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "4pfiKn5HGZP",
+          "name": "Kbd",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "7j8Cg3TQaK1",
+          "name": "NumberDecrementStepper",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "zw2lUrOGBH2",
+          "name": "NumberIncrementStepper",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "rplbNPdaLjS",
+          "name": "NumberInput",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "7wTOxbwhUVa",
+          "name": "NumberInputField",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "Zb53pSSCJ4N",
+          "name": "NumberInputStepper",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "ow9XL4zfLCF",
+          "name": "PinInput",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "sJtTQxIcI2a",
+          "name": "PinInputField",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "mIBdZksu1-7",
+          "name": "Popover",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "AY7yJYgQXJC",
+          "name": "PopoverArrow",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "ADA0Yofs7LY",
+          "name": "PopoverBody",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "z1XYfQVo0c6",
+          "name": "PopoverCloseButton",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "q1fDhIww8bK",
+          "name": "PopoverContent",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "hVcYTDlXdHT",
+          "name": "PopoverHeader",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "vtKvDgUXU8t",
+          "name": "PopoverTrigger",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "PMH1p4Tsa0f",
+          "name": "Radio",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "wvHrA3DRwd9",
+          "name": "RadioGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "occ_Jtsixxg",
+          "name": "Option",
+          "componentImportPath": "./option"
+        },
+        {
+          "id": "GYhI75oQa1n",
+          "name": "Select",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "akmH45b02PL",
+          "name": "Stat",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "QTMWf_hv2I5",
+          "name": "StatArrow",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "3LLbixd8ClR",
+          "name": "StatHelpText",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "s6ORfTsAdFP",
+          "name": "StatLabel",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "krkrQKjB30i",
+          "name": "StatNumber",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "dK5Ro3vdfVu",
+          "name": "Switch",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "rHsowDfpxQJ",
+          "name": "Table",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "SugBgGmqv0o",
+          "name": "TableCaption",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "unoSfjnDSGN",
+          "name": "TableContainer",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "uI8H3aCpcKn",
+          "name": "Tbody",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "GFXbIiz0sPL",
+          "name": "Td",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "JZWAbcvuJwE",
+          "name": "Th",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "h2GBlshvfpg",
+          "name": "Thead",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "tX9WrSUgfUc",
+          "name": "Tr",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "aJMdllPqxkt",
+          "name": "Tab",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "ITvp17rZ9ah",
+          "name": "TabList",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "yHR5SMAj9cd",
+          "name": "TabPanel",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "As5KLLrSxgc",
+          "name": "TabPanels",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "c2VoCU47NQo",
+          "name": "Tabs",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "hVali46q8tU",
+          "name": "Text",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "NJOQ6ZKAMsx",
+          "name": "Acordion",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "XJHWHM7Z2GF",
+          "name": "AccordionItem",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "JudgRnz3-Y_",
+          "name": "AccordionButton",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "02nQKcS7yEo",
+          "name": "AccordionPanel",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "LhkiOub2EhJ",
+          "name": "AccordionIcon",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "4x5BrYMVdjC",
+          "name": "AvatarBadge",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "BjvcObXSz3a",
+          "name": "Avatar",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "lrd6iLjld5W",
+          "name": "AvatarGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "rS2xuG6zqLb",
+          "name": "FormControl",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "7znEiVI9V1N",
+          "name": "FormLabel",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "Hg6FiTdSoQV",
+          "name": "FormHelperText",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "IuvRRaUytZK",
+          "name": "FormErrorMessage",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "anzv8BWxghQ",
+          "name": "Heading",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "2pL95HmbChA",
+          "name": "Highlight",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "wYG2o9R6S14",
+          "name": "Progress",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "V2QfwEEHtCv",
+          "name": "Toast",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "mYoMKGH_vjC",
+          "name": "Tooltip",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "dNnZ05kWWnT",
+          "name": "Modal",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "uHIlU1ynlTi",
+          "name": "IconButton",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "OGEuty6KKCv",
+          "name": "DrawerButtonIcon",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "mtI4UDcT0r-",
+          "name": "ChakraProvider",
+          "componentImportPath": "@chakra-ui/react"
         }
       ]
     }

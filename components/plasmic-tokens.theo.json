@@ -1,5 +1,186 @@
 {
-  "props": [],
+  "props": [
+    {
+      "name": "Black100",
+      "type": "color",
+      "value": "#000027",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "a-4jk8jvR"
+      }
+    },
+    {
+      "name": "Black200",
+      "type": "color",
+      "value": "#051440",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "9ksTQ47ES"
+      }
+    },
+    {
+      "name": "Black300",
+      "type": "color",
+      "value": "#071B4D",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "dcmZsnAlU"
+      }
+    },
+    {
+      "name": "Black400",
+      "type": "color",
+      "value": "#1B2D5B",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "Dq258QaEI"
+      }
+    },
+    {
+      "name": "Black500",
+      "type": "color",
+      "value": "#1C356A",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "6gXnqJYFl"
+      }
+    },
+    {
+      "name": "Blue",
+      "type": "color",
+      "value": "#4B9DFE",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "XsQvuNLXZ"
+      }
+    },
+    {
+      "name": "Green",
+      "type": "color",
+      "value": "#43AE5A",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "yliz0j49T"
+      }
+    },
+    {
+      "name": "Grey100",
+      "type": "color",
+      "value": "#BBC2D2",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "NsRihABbY"
+      }
+    },
+    {
+      "name": "Grey200",
+      "type": "color",
+      "value": "#6B7C9E",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "S3JQh7msC"
+      }
+    },
+    {
+      "name": "Grey300",
+      "type": "color",
+      "value": "#3E5380",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "_i1cYK0Wx"
+      }
+    },
+    {
+      "name": "Orange",
+      "type": "color",
+      "value": "#F77125",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "bNZKntB-n"
+      }
+    },
+    {
+      "name": "Purple",
+      "type": "color",
+      "value": "#735CF6",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "5nZTX6Wq9"
+      }
+    },
+    {
+      "name": "Purple2",
+      "type": "color",
+      "value": "#C059FF",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "-LkGk7nHS"
+      }
+    },
+    {
+      "name": "Red",
+      "type": "color",
+      "value": "#F3194E",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "MNhTetlnw"
+      }
+    },
+    {
+      "name": "Teal",
+      "type": "color",
+      "value": "#17E8B0",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "hRP_K9T8V"
+      }
+    },
+    {
+      "name": "White",
+      "type": "color",
+      "value": "#F2F2F2",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "T77o0Qanr"
+      }
+    },
+    {
+      "name": "White200",
+      "type": "color",
+      "value": "#E8EBF0",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "-daeQiwpY"
+      }
+    },
+    {
+      "name": "Yellow",
+      "type": "color",
+      "value": "#ED9E42",
+      "category": "color",
+      "meta": {
+        "projectId": "9khUWmozN1iqiiTyAwvqXU",
+        "id": "pMpR7kprH"
+      }
+    }
+  ],
   "global": {
     "meta": {
       "source": "plasmic.app"

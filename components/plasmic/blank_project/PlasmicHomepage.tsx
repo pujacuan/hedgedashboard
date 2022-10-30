@@ -34,13 +34,26 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import Sidebar from "../../Sidebar"; // plasmic-import: kK_QD86zEH/component
+import SidebarMenuItem from "../../SidebarMenuItem"; // plasmic-import: 1Qw0dLE7-z/component
+import NavbarCuan from "../../NavbarCuan"; // plasmic-import: klbS39rUUe/component
+import IndicatorSmall from "../../IndicatorSmall"; // plasmic-import: YCk9agzBzY/component
+import { Heading } from "@chakra-ui/react"; // plasmic-import: anzv8BWxghQ/codeComponent
+import ProductCard from "../../ProductCard"; // plasmic-import: yaxSoGmBRy/component
+
+import { useScreenVariants as useScreenVariantsdg4W0IXokTuCa } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: dg4W0IXokTUCa/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic_blank_project.module.css"; // plasmic-import: 9khUWmozN1iqiiTyAwvqXU/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: MNQD9jeCcnhg/css
 
+import WalletSvgrepoCom1SvgIcon from "../hedgedashboard/icons/PlasmicIcon__WalletSvgrepoCom1Svg"; // plasmic-import: 4G1cCMeGFh/icon
+import VaultSvgrepoComsvg2Icon from "../hedgedashboard/icons/PlasmicIcon__VaultSvgrepoComsvg2"; // plasmic-import: 2Kjcn7aZx0/icon
+import ProfileUserSvgrepoComsvgIcon from "../hedgedashboard/icons/PlasmicIcon__ProfileUserSvgrepoComsvg"; // plasmic-import: mcZdNanEHp/icon
+
 export type PlasmicHomepage__VariantMembers = {};
+
 export type PlasmicHomepage__VariantsArgs = {};
 type VariantPropType = keyof PlasmicHomepage__VariantsArgs;
 export const PlasmicHomepage__VariantProps = new Array<VariantPropType>();
@@ -52,8 +65,9 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   section?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
-  text?: p.Flex<"div">;
+  sidebar?: p.Flex<typeof Sidebar>;
+  navbarCuan?: p.Flex<typeof NavbarCuan>;
+  content?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -68,12 +82,24 @@ function PlasmicHomepage__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
 
   const $ctx = ph.useDataEnv?.() || {};
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsdg4W0IXokTuCa()
+  });
 
   return (
     <React.Fragment>
@@ -96,6 +122,7 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
+            projectcss.plasmic_tokens,
             sty.root
           )}
         >
@@ -106,46 +133,898 @@ function PlasmicHomepage__RenderFunc(props: {
             hasGap={true}
             className={classNames(projectcss.all, sty.section)}
           >
-            <h1
-              data-plasmic-name={"h1"}
-              data-plasmic-override={overrides.h1}
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1
-              )}
-            >
-              {"Welcome to your first page."}
-            </h1>
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <Sidebar
+                data-plasmic-name={"sidebar"}
+                data-plasmic-override={overrides.sidebar}
+                className={classNames("__wab_instance", sty.sidebar)}
+                menu={
+                  <React.Fragment>
+                    <SidebarMenuItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.sidebarMenuItem__n8Nb
+                      )}
+                      isActive={true}
+                    />
 
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>
-                  {
-                    "If you haven't already done so, go back and learn the basics by going through the Plasmic Levels tutorial.\n\nIt's always easier to start from examples! Add a new page using a template—do this from the list of pages in the top left (the gray + button).\n\nOr press the big blue + button to start dragging items into this page.\n\nIntegrate this project into your codebase—press the "
-                  }
-                </React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
+                    <SidebarMenuItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.sidebarMenuItem__nFdsI
+                      )}
+                    />
+
+                    <SidebarMenuItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.sidebarMenuItem__mOAmg
+                      )}
+                    />
+                  </React.Fragment>
+                }
+              />
+            ) : null}
+
+            <div className={classNames(projectcss.all, sty.freeBox__fVKw)}>
+              <NavbarCuan
+                data-plasmic-name={"navbarCuan"}
+                data-plasmic-override={overrides.navbarCuan}
+                className={classNames("__wab_instance", sty.navbarCuan)}
+              />
+
+              <div
+                data-plasmic-name={"content"}
+                data-plasmic-override={overrides.content}
+                className={classNames(projectcss.all, sty.content)}
+              >
+                <div className={classNames(projectcss.all, sty.columns__hlQ4)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column__hikQ1)}
+                  >
+                    <IndicatorSmall
+                      className={classNames(
+                        "__wab_instance",
+                        sty.indicatorSmall__q8ILr
+                      )}
+                    >
+                      {true ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__unTrn
+                          )}
+                        >
+                          <VaultSvgrepoComsvg2Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__azp87
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__o88E
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__mLbRr
+                          )}
+                        >
+                          {"Product"}
+                        </div>
+
+                        <Heading
+                          className={classNames(
+                            "__wab_instance",
+                            sty.heading__fFsgx
+                          )}
+                          noOfLines={1 as const}
+                          size={"lg" as const}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__kVpzs
+                            )}
+                          >
+                            {"3"}
+                          </div>
+                        </Heading>
+                      </div>
+                    </IndicatorSmall>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.column___1QsIr)}
+                  >
+                    <IndicatorSmall
+                      className={classNames(
+                        "__wab_instance",
+                        sty.indicatorSmall__mDqfl
+                      )}
+                    >
+                      {true ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__mjWxC
+                          )}
+                        >
+                          <VaultSvgrepoComsvg2Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg___8BfjA
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___1Ljh
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__boujw
+                          )}
+                        >
+                          {"Assets Under Management"}
+                        </div>
+
+                        <Heading
+                          className={classNames(
+                            "__wab_instance",
+                            sty.heading__euwSn
+                          )}
+                          noOfLines={1 as const}
+                          size={"lg" as const}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__zAs3B
+                            )}
+                          >
+                            {"3"}
+                          </div>
+                        </Heading>
+                      </div>
+                    </IndicatorSmall>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.column___8EwqN)}
+                  >
+                    <IndicatorSmall
+                      className={classNames(
+                        "__wab_instance",
+                        sty.indicatorSmall__llNx
+                      )}
+                    >
+                      {true ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__ohhrF
+                          )}
+                        >
+                          <VaultSvgrepoComsvg2Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__dRtLs
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__fTdrU
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__llAm9
+                          )}
+                        >
+                          {"Nasabah"}
+                        </div>
+
+                        <Heading
+                          className={classNames(
+                            "__wab_instance",
+                            sty.heading__vuhsz
+                          )}
+                          noOfLines={1 as const}
+                          size={"lg" as const}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___8CjbW
+                            )}
+                          >
+                            {"3"}
+                          </div>
+                        </Heading>
+                      </div>
+                    </IndicatorSmall>
+                  </div>
+                </div>
+
+                {true ? (
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__tq4Ex)}
+                  >
+                    <Heading
+                      className={classNames(
+                        "__wab_instance",
+                        sty.heading__sASy0
+                      )}
+                      noOfLines={1 as const}
+                      size={"lg" as const}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__aueXo
+                        )}
+                      >
+                        {"Our Products"}
+                      </div>
+                    </Heading>
+                  </div>
+                ) : null}
+
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.columns__dqlV)}
                 >
-                  {"Code"}
-                </span>
-                <React.Fragment>
-                  {
-                    " button in the top right and follow the quickstart instructions.\n\nJoin our Slack community (icon in bottom left) for help any time."
-                  }
-                </React.Fragment>
-              </React.Fragment>
+                  <div
+                    className={classNames(projectcss.all, sty.column__jxRq4)}
+                  >
+                    <ProductCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.productCard___3PRye
+                      )}
+                    >
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__aKv3V
+                        )}
+                      >
+                        <ProfileUserSvgrepoComsvgIcon
+                          className={classNames(projectcss.all, sty.svg___5Jn3)}
+                          role={"img"}
+                        />
+
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__r1H4V
+                          )}
+                        >
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__rz1Sy
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__ffjX
+                              )}
+                            >
+                              {"Moon"}
+                            </div>
+                          </Heading>
+
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__sSjM
+                            )}
+                          >
+                            <Heading
+                              className={classNames(
+                                "__wab_instance",
+                                sty.heading__oGuU
+                              )}
+                              noOfLines={1 as const}
+                              size={"sm" as const}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__kgp4S
+                                )}
+                              >
+                                {"$500"}
+                              </div>
+                            </Heading>
+
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__x91Fc
+                              )}
+                            >
+                              {"Min. Deposit"}
+                            </div>
+                          </p.Stack>
+                        </p.Stack>
+                      </p.Stack>
+
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__yl5CF
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__fwuTu
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__jGuh
+                            )}
+                          >
+                            {"Aum"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__sBn5L
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__hx6D
+                              )}
+                            >
+                              {"$11M"}
+                            </div>
+                          </Heading>
+                        </div>
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__ferbb
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___8MKs
+                            )}
+                          >
+                            {"Profit"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__fWsZu
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__kF0ZW
+                              )}
+                            >
+                              {"+20%"}
+                            </div>
+                          </Heading>
+                        </div>
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___1JuBk
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__xosd
+                            )}
+                          >
+                            {"Users"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__ob2MF
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___2VCbl
+                              )}
+                            >
+                              {"10"}
+                            </div>
+                          </Heading>
+                        </div>
+                      </p.Stack>
+                    </ProductCard>
+                  </div>
+
+                  <div className={classNames(projectcss.all, sty.column__vNwS)}>
+                    <ProductCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.productCard__jj0A
+                      )}
+                    >
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__v0Kys
+                        )}
+                      >
+                        <ProfileUserSvgrepoComsvgIcon
+                          className={classNames(projectcss.all, sty.svg__qwXus)}
+                          role={"img"}
+                        />
+
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__pTkUy
+                          )}
+                        >
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__sFq55
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__bz5Be
+                              )}
+                            >
+                              {"Stars"}
+                            </div>
+                          </Heading>
+
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__rl1Sz
+                            )}
+                          >
+                            <Heading
+                              className={classNames(
+                                "__wab_instance",
+                                sty.heading__oVueG
+                              )}
+                              noOfLines={1 as const}
+                              size={"sm" as const}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__jqbu
+                                )}
+                              >
+                                {"$500"}
+                              </div>
+                            </Heading>
+
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__c6Tfv
+                              )}
+                            >
+                              {"Min. Deposit"}
+                            </div>
+                          </p.Stack>
+                        </p.Stack>
+                      </p.Stack>
+
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__eWx5E
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___8Gp2G
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tnqDb
+                            )}
+                          >
+                            {"Aum"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__meZ4S
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__mbkG
+                              )}
+                            >
+                              {"$11M"}
+                            </div>
+                          </Heading>
+                        </div>
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___6EPGg
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__za42W
+                            )}
+                          >
+                            {"Profit"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__cvWvm
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__wpZ0U
+                              )}
+                            >
+                              {"+20%"}
+                            </div>
+                          </Heading>
+                        </div>
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__nZfLw
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__fJ9Dy
+                            )}
+                          >
+                            {"Users"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading___0FMhm
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__dCIsO
+                              )}
+                            >
+                              {"10"}
+                            </div>
+                          </Heading>
+                        </div>
+                      </p.Stack>
+                    </ProductCard>
+                  </div>
+
+                  <div className={classNames(projectcss.all, sty.column__riyF)}>
+                    <ProductCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.productCard__xsCoK
+                      )}
+                    >
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__u3Nd
+                        )}
+                      >
+                        <ProfileUserSvgrepoComsvgIcon
+                          className={classNames(projectcss.all, sty.svg__hGgEt)}
+                          role={"img"}
+                        />
+
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__rjQ8E
+                          )}
+                        >
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__rSj1W
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__vcYUc
+                              )}
+                            >
+                              {"Galaxy"}
+                            </div>
+                          </Heading>
+
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__zyYaO
+                            )}
+                          >
+                            <Heading
+                              className={classNames(
+                                "__wab_instance",
+                                sty.heading___3Nqh
+                              )}
+                              noOfLines={1 as const}
+                              size={"sm" as const}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__jjwJv
+                                )}
+                              >
+                                {"$500"}
+                              </div>
+                            </Heading>
+
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___8PBpD
+                              )}
+                            >
+                              {"Min. Deposit"}
+                            </div>
+                          </p.Stack>
+                        </p.Stack>
+                      </p.Stack>
+
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__eNXxu
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__pRpTe
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___3VUO
+                            )}
+                          >
+                            {"Aum"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__mRgBd
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__a3Cmr
+                              )}
+                            >
+                              {"$11M"}
+                            </div>
+                          </Heading>
+                        </div>
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__cCdot
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tm4IT
+                            )}
+                          >
+                            {"Profit"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__sHlr5
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__ms3ZH
+                              )}
+                            >
+                              {"+20%"}
+                            </div>
+                          </Heading>
+                        </div>
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__cfN5H
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__cud2
+                            )}
+                          >
+                            {"Users"}
+                          </div>
+
+                          <Heading
+                            className={classNames(
+                              "__wab_instance",
+                              sty.heading__kxblp
+                            )}
+                            noOfLines={1 as const}
+                            size={"md" as const}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__iCqbF
+                              )}
+                            >
+                              {"10"}
+                            </div>
+                          </Heading>
+                        </div>
+                      </p.Stack>
+                    </ProductCard>
+                  </div>
+                </p.Stack>
+              </div>
             </div>
           </p.Stack>
         </div>
@@ -155,10 +1034,11 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "text"],
-  section: ["section", "h1", "text"],
-  h1: ["h1"],
-  text: ["text"]
+  root: ["root", "section", "sidebar", "navbarCuan", "content"],
+  section: ["section", "sidebar", "navbarCuan", "content"],
+  sidebar: ["sidebar"],
+  navbarCuan: ["navbarCuan"],
+  content: ["content"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -166,8 +1046,9 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   section: "section";
-  h1: "h1";
-  text: "div";
+  sidebar: typeof Sidebar;
+  navbarCuan: typeof NavbarCuan;
+  content: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -232,8 +1113,9 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
-    h1: makeNodeComponent("h1"),
-    text: makeNodeComponent("text"),
+    sidebar: makeNodeComponent("sidebar"),
+    navbarCuan: makeNodeComponent("navbarCuan"),
+    content: makeNodeComponent("content"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

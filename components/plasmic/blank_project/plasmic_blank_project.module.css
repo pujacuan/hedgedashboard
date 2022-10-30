@@ -1,7 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
+
+.plasmic_tokens {
+  --token-a-4jk8jvR: #000027;
+  --plasmic-token-black-100: var(--token-a-4jk8jvR);
+  --token-9ksTQ47ES: #051440;
+  --plasmic-token-black-200: var(--token-9ksTQ47ES);
+  --token-dcmZsnAlU: #071b4d;
+  --plasmic-token-black-300: var(--token-dcmZsnAlU);
+  --token-Dq258QaEI: #1b2d5b;
+  --plasmic-token-black-400: var(--token-Dq258QaEI);
+  --token-6gXnqJYFl: #1c356a;
+  --plasmic-token-black-500: var(--token-6gXnqJYFl);
+  --token-_i1cYK0Wx: #3e5380;
+  --plasmic-token-grey-300: var(--token-_i1cYK0Wx);
+  --token-S3JQh7msC: #6b7c9e;
+  --plasmic-token-grey-200: var(--token-S3JQh7msC);
+  --token-NsRihABbY: #bbc2d2;
+  --plasmic-token-grey-100: var(--token-NsRihABbY);
+  --token--daeQiwpY: #e8ebf0;
+  --plasmic-token-white-200: var(--token--daeQiwpY);
+  --token-T77o0Qanr: #f2f2f2;
+  --plasmic-token-white: var(--token-T77o0Qanr);
+  --token-pMpR7kprH: #ed9e42;
+  --plasmic-token-yellow: var(--token-pMpR7kprH);
+  --token-bNZKntB-n: #f77125;
+  --plasmic-token-orange: var(--token-bNZKntB-n);
+  --token-MNhTetlnw: #f3194e;
+  --plasmic-token-red: var(--token-MNhTetlnw);
+  --token-yliz0j49T: #43ae5a;
+  --plasmic-token-green: var(--token-yliz0j49T);
+  --token-XsQvuNLXZ: #4b9dfe;
+  --plasmic-token-blue: var(--token-XsQvuNLXZ);
+  --token-5nZTX6Wq9: #735cf6;
+  --plasmic-token-purple: var(--token-5nZTX6Wq9);
+  --token--LkGk7nHS: #c059ff;
+  --plasmic-token-purple-2: var(--token--LkGk7nHS);
+  --token-hRP_K9T8V: #17e8b0;
+  --plasmic-token-teal: var(--token-hRP_K9T8V);
+}
 
 .plasmic_default_styles {
-  --mixin-MPyCOIxshTHM_font-family: "Inter", sans-serif;
+  --mixin-MPyCOIxshTHM_font-family: "Poppins", sans-serif;
   --mixin-MPyCOIxshTHM_font-size: 16px;
   --mixin-MPyCOIxshTHM_font-weight: 400;
   --mixin-MPyCOIxshTHM_font-style: normal;
